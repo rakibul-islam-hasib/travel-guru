@@ -10,14 +10,6 @@ const navbarItems = [
 ];
 
 const NavBar = () => {
-    const path = useLocation().pathname;
-    // console.log(path)  
-    const [navPath, setNavPath] = useState(true);
-    if (path === '/user/login') {
-        setNavPath(false)
-    } else {
-        setNavPath(true)
-    }
     const navigate = useNavigate();
     return (
         <div className='w-[90%] flex justify-between items-center py-3 mx-auto'>
@@ -37,7 +29,7 @@ const NavBar = () => {
                             </li>
                         ))
                     }
-                    <li className='inline-block ml-3'>{navPath ? <button className='px-4 py-2 font-semibold rounded-md  bg-[#F9A51A]' onClick={() => navigate('user/register')}>Register</button> : <button className='px-4 py-2 font-semibold rounded-md  bg-[#F9A51A]' onClick={() => navigate('user/login')}>Login</button>}</li>
+                    <li className='inline-block ml-3'> <button className='px-4 py-2 font-semibold rounded-md  bg-[#F9A51A]' onClick={() => navigate('user/login')}>Login</button></li>
                 </ul>
 
             </div>
