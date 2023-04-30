@@ -27,11 +27,11 @@ const Login = () => {
                     <span class="flex-shrink text-base text-gray-500 px-4 italic font-light">OR</span>
                     <div class="flex-grow h-px bg-gray-400"></div>
                 </div>
-                <div className="flex border mb-3 rounded-full px-5 py-2 justify-center items-center gap-4">
+                <div className="flex hover:cursor-pointer border mb-3 rounded-full px-5 py-2 justify-center items-center gap-4">
                     <img src={google} className='w-[20px] ' alt="" />
                     <h1 className='text-sm font-bold'>Continue with Google</h1>
                 </div>
-                <div className="flex border rounded-full px-5 py-2 justify-center items-center gap-4">
+                <div className="flex hover:cursor-pointer border rounded-full px-5 py-2 justify-center items-center gap-4">
                     <img src={facebook} className='w-[20px] ' alt="" />
                     <h1 className='text-sm font-bold'>Continue with Facebook</h1>
                 </div>
