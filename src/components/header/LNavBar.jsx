@@ -19,17 +19,16 @@ const LNavBar = () => {
             setNavPath(false);
         }
     }, [path])
-    console.log(navPath)
     const navigate = useNavigate();
     return (
         <div>
-            <div className='w-[90%] flex justify-between items-center py-3 mx-auto'>
+            <div className='w-[85%] flex justify-between items-center py-3 mx-auto'>
                 <div className="">
                     <img src={logo} className='h-[50px]' alt="" />
                 </div>
 
                 <div className="">
-                    <ul>
+                    <ul className='hidden md:block'>
                         {
                             navbarItems.map((item, index) => (
                                 <li key={index} className='inline-block mx-2'>

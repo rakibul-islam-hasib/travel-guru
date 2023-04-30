@@ -58,10 +58,7 @@ const Home = () => {
                         modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
                         className="mySwiper"
                         onSlideChange={handleSlideChange}
-                        navigation={{
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        }}
+                        navigation={true}
                     >
                         {travelDestinations.map((destination, index) => (
                             <SwiperSlide key={index}>
