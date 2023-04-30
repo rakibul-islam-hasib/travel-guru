@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Cox's Bazar",
+        "image": "https://images.unsplash.com/photo-1608958435020-e8a7109ba809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80",
+        "description": "Cox's Bazar is a popular tourist destination and attracts a large number of visitors each year. The town has a number of luxury hotels, resorts, and guesthouses that offer a comfortable stay for tourists. The beach is the main attraction of Cox's Bazar, where visitors can enjoy swimming, surfing, sunbathing, and other water activities."
+    },
+    {
+        "title": "Sundarbans",
+        "image": "https://images.unsplash.com/photo-1540018177157-957400dbd08a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80",
+        "description": "The Sundarbans is a mangrove forest located in the delta region of the Ganges, Brahmaputra, and Meghna rivers in the Bay of Bengal. It is shared between Bangladesh and India, with the larger portion located in Bangladesh. The Sundarbans is a UNESCO World Heritage Site and is home to the Royal Bengal Tiger, which is one of the rarest and most majestic big cats in the world."
+    },
+    {
+        "title": "Srimangal",
+        "image": "https://images.unsplash.com/photo-1677950275757-0460cab1df08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "description": "Srimangal is surrounded by hills and forests and has a number of nature reserves and wildlife sanctuaries, including the Lawachara National Park, which is home to several species of primates, birds, and reptiles. The park offers visitors the opportunity to go on jungle treks and observe the wildlife up close."
+    },
+    {
+        "title": "Bandarban",
+        "image": "https://images.unsplash.com/photo-1585123388867-3bfe6dd4bdbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=801&q=80",
+        "description": "Bandarban has a number of popular tourist attractions, including the Nilgiri Mountain, which is the highest peak in the district and offers stunning views of the surrounding hills and valleys. Visitors can also explore the Boga Lake, which is a natural lake surrounded by hills and is popular for swimming and boating."
+    },
+    {
+        "title": "Sajek Valley",
+        "image": "https://images.unsplash.com/photo-1578128178075-a7fbe741fcf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "description": "Sajek Valley is a scenic hill station located in the Chittagong Hill Tracts of Bangladesh. It is known for its stunning natural beauty, lush green hills, and panoramic views of the surrounding valleys. The valley is home to the indigenous community of the Chakma people. The main attraction of Sajek Valley is the breathtaking panoramic view of the hills and valleys that can be seen from the top of the mountains. Visitors can take a trek to the top of the hills to enjoy the stunning views of the landscape. The valley is also surrounded by dense forests, which are home to a variety of flora and fauna."
+    }
+]
