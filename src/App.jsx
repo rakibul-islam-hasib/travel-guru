@@ -9,9 +9,9 @@ const App = () => {
     <div className='bg-hero-pattern  bg-fixed bg-cover h-screen'>
       <div className="h-screen bg-[#353333] bg-opacity-70">
         <NavBar />
-       <Outlet /> 
+        <Outlet />
       </div>
-      
+
     </div>
   );
 };

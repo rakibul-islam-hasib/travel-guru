@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Layout = () => {
+const Register = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Layout = () => {
     );
 };
 
-export default Layout;
+export default Register;

@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../assets/icons/logo.png';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 const navbarItems = [
     { label: 'Home', url: '/' },
     { label: 'Destinations', url: '/destinations' },
     { label: 'Tours', url: '/tours' },
     { label: 'Blog', url: '/blog' }
-  ];
-  
+];
+
 const NavBar = () => {
+    const path = useLocation().pathname;
+    // console.log(path)  
+    const [navPath, setNavPath] = useState(true);
+    if (path === '/user/login') {
+        setNavPath(false)
+    } else {
+        setNavPath(true)
+    }
+    const navigate = useNavigate();
     return (
         <div className='w-[90%] flex justify-between items-center py-3 mx-auto'>
             <div className="">
@@ -28,7 +37,7 @@ const NavBar = () => {
                             </li>
                         ))
                     }
-                    <li className='inline-block px-4 py-2 font-semibold rounded-md ml-3 bg-[#F9A51A]'><button>Login</button></li>
+                    <li className='inline-block ml-3'>{navPath ? <button className='px-4 py-2 font-semibold rounded-md  bg-[#F9A51A]' onClick={() => navigate('user/register')}>Register</button> : <button className='px-4 py-2 font-semibold rounded-md  bg-[#F9A51A]' onClick={() => navigate('user/login')}>Login</button>}</li>
                 </ul>
 
             </div>
