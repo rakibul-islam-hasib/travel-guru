@@ -1,9 +1,11 @@
 import React from 'react';
-
+import logo from '../../assets/icons/logo.png';
 const NavBar = () => {
     return (
-        <div>
-            <h1>Hello From Nav Bar </h1>
+        <div className='w-[85%] mx-auto'>
+            <div className="">
+                <img src={logo} className='h-[50px]' alt="" />
+            </div>
         </div>
     );
 };

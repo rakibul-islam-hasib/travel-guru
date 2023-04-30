@@ -1,9 +1,12 @@
 import React from 'react';
+import NavBar from './components/header/NavBar';
 
 const App = () => {
   return (
-    <div>
-      
+    <div className='bg-hero-pattern  bg-fixed bg-cover h-screen'>
+      <div className="h-screen bg-[#353333] bg-opacity-60">
+        <NavBar />
+      </div>
     </div>
   );
 };
