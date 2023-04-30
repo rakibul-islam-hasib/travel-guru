@@ -7,6 +7,8 @@ import Home from './components/Home/Home.jsx'
 import User from './components/user/User.jsx'
 import Login from './components/user/Login.jsx'
 import Register from './components/user/Register.jsx'
+import * as dotenv from 'dotenv' ;
+dotenv.config()
 const router = createBrowserRouter([
   {
     path: '/',
