@@ -8,6 +8,9 @@ export default {
     extend: {
       backgroundImage : {
         'hero-pattern': "url('./src/assets/Rectangle 1.png')",
+      },
+      colors : { 
+        'primary' : '#F9A51A',
       }
     },
   },
