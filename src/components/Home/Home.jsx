@@ -6,10 +6,12 @@ import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [travelDestinations, setTravelDestinations] = useState([])
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -33,7 +35,7 @@ const Home = () => {
                 <div className="text-white flex justify-center items-start flex-col">
                     <h1 className='text-7xl font-bold'>{activeDestination.title}</h1>
                     <p className='my-3'>{activeDestination?.description.slice(0, 200)}...</p>
-                    <button className='inline-flex items-center gap-3 bg-primary px-6 py-2 rounded'>Booking <AiOutlineArrowRight /></button>
+                    <button onClick={()=>navigate(`tour/${activeDestination.id}`)} className='inline-flex items-center gap-3 bg-primary px-6 py-2 rounded'>Booking <AiOutlineArrowRight /></button>
                 </div>
                 <div className="">
                     <Swiper

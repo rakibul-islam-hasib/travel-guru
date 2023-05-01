@@ -9,13 +9,15 @@ import Login from './components/user/Login.jsx'
 import Register from './components/user/Register.jsx'
 
 import AuthContext from './providers/AuthContext.jsx'
+import Review from './components/Booking/Review.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      { path: '/', element: <Home /> }
+      { path: '/', element: <Home /> },
+      { path: 'tour/:id', element: <Review /> }
     ]
   },
   {
