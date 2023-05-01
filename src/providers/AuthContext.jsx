@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { app } from '../firebase/firebase.init';
 import { MoonLoader } from 'react-spinners';
 export const AuthProvider = createContext(null);
@@ -19,6 +19,15 @@ const AuthContext = ({children}) => {
        return updateProfile(user , {displayName : name}); 
         // setLoader(true)
     }
+    const logOut = ()=> { 
+        setLoader(true)
+        return signOut(auth);
+    }
+    const googleProvider = new GoogleAuthProvider();
+    const handelGoogleLogin = ()=> {
+        setLoader(true)
+        return signInWithPopup(auth , googleProvider); 
+    }
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth , currentUser => { 
             setUser(currentUser)
@@ -28,7 +37,7 @@ const AuthContext = ({children}) => {
             return unsubscribe()
         }
     },[])
-    const authValue = { user , logIn , signUp , updateP}
+    const authValue = { user , logIn , signUp , updateP , logOut , handelGoogleLogin}
     if(loader) return <div className="h-[88vh] flex justify-center items-center">
         <MoonLoader color="#36d7b7" />
     </div>

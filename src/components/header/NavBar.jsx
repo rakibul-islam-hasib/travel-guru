@@ -13,8 +13,12 @@ const navbarItems = [
 
 const NavBar = () => {
     const navigate = useNavigate();
-    const { user } = useContext(AuthProvider);
-
+    const { user , logOut} = useContext(AuthProvider);
+    const handelLogOut = ()=>{ 
+        logOut().then(()=>{
+            navigate('/')
+        })
+    }
     return (
         <div className='w-[90%] flex justify-between items-center py-3 mx-auto'>
             <div className="">
@@ -34,12 +38,12 @@ const NavBar = () => {
                         ))
                     }
                     {
-                        user ? <li className='inline-block font-bold text-primary hover:text-red-500 duration-200 cursor-pointer items-center mx-2'>
+                        user ? <li className='inline-block font-bold text-primary hover:text-red-500 duration-200  items-center mx-2'>
                             <span
                                 title={`${user.displayName}`}
                                 className='inline-flex justify-center items-center gap-3'>
                                 {user.displayName}
-                                <span title='Logout' className='text-white hover:text-red-600'> <FaSignOutAlt className='text-xl ' />
+                                <span onClick={handelLogOut} title='Logout' className='text-white cursor-pointer hover:text-red-600'> <FaSignOutAlt className='text-xl ' />
                                 </span></span></li> :
                             <li className='inline-block ml-3'> <button className='px-4 py-2 font-semibold rounded-md  bg-[#F9A51A]' onClick={() => navigate('user/login')}>Login</button></li>
                     }
