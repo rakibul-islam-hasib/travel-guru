@@ -30,7 +30,7 @@ const Login = () => {
     }
     return (
         loading ? 
-            <div className="h-[88vh] flex justify-center items-center">
+                <div className="h-[88vh] flex justify-center items-center">
                 <MoonLoader color="#36d7b7" />
             </div>
          :
