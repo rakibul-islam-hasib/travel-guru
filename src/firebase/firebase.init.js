@@ -1,19 +1,16 @@
-import * as dotenv from 'dotenv' ; 
-dotenv.config() ;
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-let keys = process.env ;
 const firebaseConfig = {
-  apiKey: keys.API_KEY,
-  authDomain: keys.AUTH_DOMAIN,
-  projectId: keys.PROJECT_ID,
-  storageBucket: keys.STORAGE_BUCKET,
-  messagingSenderId: keys.MESSAGING_SENDER_ID,
-  appId: keys.APP_ID
+  apiKey: "AIzaSyCInN5SQnVVLZj68nhRCOUh0MWky8T1yxI",
+  authDomain: "travel-guru-159.firebaseapp.com",
+  projectId: "travel-guru-159",
+  storageBucket: "travel-guru-159.appspot.com",
+  messagingSenderId: "292118618293",
+  appId: "1:292118618293:web:cd576b216db6239c2f9efc"
 };
 
 // Initialize Firebase
