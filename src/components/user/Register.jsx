@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import google from '../../assets/icons/search.png';
 import facebook from '../../assets/icons/facebook.png';
 import { AuthProvider } from '../../providers/AuthContext';
 import { MoonLoader } from 'react-spinners';
 const Register = () => {
-    const { signUp, updateP, user } = useContext(AuthProvider);
+    const { signUp, updateP, handelGoogleLogin} = useContext(AuthProvider);
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate();
     const handelFormSubmit = e => {
         setLoading(true)
         e.preventDefault()
@@ -20,6 +21,7 @@ const Register = () => {
                 // console.log(result.user)
                 updateP(result.user, form.name.value)
                 setLoading(false)
+                navigate('/')
             })
             .catch(err => {
                 console.log(err.code)
@@ -27,7 +29,19 @@ const Register = () => {
             })
      
     }
-    // console.log(user)
+    const googleLoginHandler = () => {
+        setLoading(true)
+        handelGoogleLogin()
+            .then(result => {
+                // console.log(result.user)
+                setLoading(false)
+                navigate('/')
+            })
+            .catch(err => {
+                console.log(err.code)
+                setLoading(false)
+            })
+    }
     return (
         <>
             {
@@ -51,10 +65,12 @@ const Register = () => {
                                 <span className="flex-shrink text-base text-gray-500 px-4 italic font-light">OR</span>
                                 <div className="flex-grow h-px bg-gray-400"></div>
                             </div>
-                            <div className="flex cursor-pointer border mb-3 rounded-full px-5 py-2 justify-center items-center gap-4">
+                            {/* Google Login */}
+                            <div onClick={googleLoginHandler} className="flex cursor-pointer border mb-3 rounded-full px-5 py-2 justify-center items-center gap-4">
                                 <img src={google} className='w-[20px] ' alt="" />
                                 <h1 className='text-sm font-bold'>Continue with Google</h1>
                             </div>
+                            {/* Facebook login */}
                             <div className="flex cursor-pointer border rounded-full px-5 py-2 justify-center items-center gap-4">
                                 <img src={facebook} className='w-[20px] ' alt="" />
                                 <h1 className='text-sm font-bold'>Continue with Facebook</h1>
